@@ -1,0 +1,12 @@
+PS3="Continue? "
+while true; do
+
+    read -p "Enter a number: " n
+    ((0 <= n && n <= 50)) && echo "cube = $((n * n * n))"
+
+    select ans in yes no; do
+        case $ans in
+            yes) break ;;
+            no) break 2 ;;
+        esac
+    done
